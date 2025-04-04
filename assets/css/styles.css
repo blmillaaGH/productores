@@ -1,6 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem; /*56px*/
@@ -1266,4 +1267,174 @@ the website, in dark theme
     margin: 0 0 2rem 0;
   }
 }
+/* ===== Producer Section Base ===== */
+.producer-section {
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producer-section h2 {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  color: var(--title-color);
+}
+
+/* ===== Grid Layout ===== */
+.producer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .producer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Producer Card ===== */
+.producer-lista {
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.producer-lista:hover {
+  transform: translateY(-4px);
+}
+
+.producer-name {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+}
+
+.producer-description {
+  font-size: var(--normal-font-size);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.producer-description strong {
+  color: var(--first-color);
+}
+
+/* ===== Dark Theme Support ===== */
+body.dark-theme .producer-section {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+body.dark-theme .producer-lista {
+  background-color: var(--first-color-dark);
+  color: #ffffff;
+}
+
+body.dark-theme .producer-name {
+  color: #ffffff;
+}
+
+body.dark-theme .producer-description {
+  color: #ffffff;
+}
+
+body.dark-theme .producer-description strong {
+  color: var(--first-color-lighten);
+}
+
+/* ===== Producer Section Base ===== */
+.producer-section {
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.producer-section h2 {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  color: var(--title-color);
+}
+
+/* ===== Grid Layout (1 columna en celular, 2 en desktop) ===== */
+.producer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .producer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Tarjeta del productor ===== */
+.producer-lista {
+  background-color: var(--container-color, #fff);
+  color: var(--text-color, #1a1a1a);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.producer-lista:hover {
+  transform: translateY(-4px);
+}
+
+.producer-name {
+  font-weight: var(--font-semi-bold, 600);
+  font-size: var(--h3-font-size, 1.2rem);
+  margin-bottom: 0.75rem;
+  color: var(--title-color, #1a1a1a);
+}
+
+.producer-description {
+  font-size: var(--normal-font-size, 0.95rem);
+  color: var(--text-color, #1a1a1a);
+  line-height: 1.5;
+}
+
+.producer-description strong {
+  color: var(--first-color, #0d6efd);
+}
+
+/* ===== Modo oscuro ===== */
+body.dark-theme .producer-section {
+  background-color: var(--body-color, #121212);
+  color: #ffffff;
+}
+
+body.dark-theme .producer-lista {
+  background-color: var(--first-color-dark, #1f1f1f);
+  color: #ffffff;
+}
+
+body.dark-theme .producer-name,
+body.dark-theme .producer-description {
+  color: #ffffff;
+}
+
+body.dark-theme .producer-description strong {
+  color: var(--first-color-lighten, #ffdddd);
+}
+
+
 }
